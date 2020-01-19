@@ -1,0 +1,100 @@
+// myPlans styles
+.myPlans__title {
+  font-weight: bold;
+}
+// add plan styles
+.add {
+  padding-top: 1rem;
+  &__form {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative;
+    width: 60%;
+  }
+  &__input {
+    border: 1px solid orangered;
+    border-right: none;
+    border-radius: 1rem 0 0 1rem;
+    padding: 0.7rem 2rem;
+    width: 100%;
+
+    &:focus {
+      // box-shadow: 0 0 .5rem .1rem rgb(0, 153, 255);
+      outline: none;
+    }
+  }
+
+  & .btn {
+    border-radius: 0 1rem 1rem 0;
+    flex-shrink: 0;
+
+    &:hover {
+      & + .add__input {
+        border: 1px solid rgb(0, 153, 255);
+      }
+    }
+  }
+}
+
+// filter styles
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+
+  & .btn {
+    margin-left: 1rem;
+  }
+}
+
+// plans styles
+.plans {
+  padding-top: 3rem;
+
+  &__element {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__data {
+    background-color: #ddd;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    & ul {
+      border-top: 1px solid #333;
+      border-radius: 1rem;
+      text-align-last: left;
+      
+      & li {
+        // cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 2.5rem;
+        padding: 0.5rem 1rem;
+
+        & input {
+          cursor: pointer;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #333;
+        }
+
+        &.done {
+          text-decoration: line-through;
+        }
+
+        &.important {
+          background-color: rgb(0, 136, 0);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
