@@ -1,0 +1,34 @@
+// add plan styles
+.add {
+  padding-top: 1rem;
+  &__form {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative;
+    width: 60%;
+  }
+  &__input {
+    border: 1px solid orangered;
+    border-right: none;
+    border-radius: 1rem 0 0 1rem;
+    padding: 0.7rem 2rem;
+    width: 100%;
+
+    &:focus {
+      // box-shadow: 0 0 .5rem .1rem rgb(0, 153, 255);
+      outline: none;
+    }
+  }
+
+  & .btn {
+    border-radius: 0 1rem 1rem 0;
+    flex-shrink: 0;
+
+    &:hover {
+      & + .add__input {
+        border: 1px solid rgb(0, 153, 255);
+      }
+    }
+  }
+}
